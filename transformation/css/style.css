@@ -1,0 +1,48 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-gap: 10px;
+    justify-content: center;
+    margin-top: 50px;
+}
+        
+.square {
+    width: 100px;
+    height: 100px;
+    background-color: #FFF1A5;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+        
+.red {
+    background-color: #FF0000;
+}
+        
+@keyframes shake {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(5deg); }
+    50% { transform: rotate(0deg); }
+    75% { transform: rotate(-5deg); }
+    100% { transform: rotate(0deg); }
+}
+        
+.shake {
+    animation: shake 0.5s ease infinite;
+}
+
+.title {
+    text-align: center;
+    font-family: Tahoma, sans-serif;
+    color: #333;
+}
+
+.instructions {
+    text-align: center;
+    font-family: Tahoma, sans-serif;
+    color: #666;
+    margin-bottom: 20px;
+}
+.red-text {
+    color: #FF0000;
+    font-weight: bold;
+}
