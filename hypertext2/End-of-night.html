@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>End of the Night</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0);
+            transition: background-color 2s ease;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>End of the Night</h1>
+        <p class="intro">
+            After a long and eventful first day, you get ready for bed. You shower, remove your makeup, and finish your nighttime routine. Finally you slip into your cozy pajamas and lay down, ready for a restful night of sleep.
+        </p>
+        <img src="img/cozy_bed.jpg" alt="Night Routine" class="main-image">
+        <p class="intro">
+            The room darkens as you close your eyes, and the sun will rise soon enough to start a brand-new day.
+        </p>
+        <div class="overlay" id="overlay"></div>
+    </div>
+
+    <script>
+        const overlay = document.getElementById('overlay');
+        let isDimmed = false;
+
+        document.body.addEventListener('click', () => {
+            if (!isDimmed) {
+                overlay.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
+                isDimmed = true;
+                setTimeout(() => {
+                    window.location.href = 'morning.html';
+                }, 3000);
+            }
+        });
+    </script>
+</body>
+</html>

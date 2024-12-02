@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Morning: Second Day of School</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .options {
+            text-align: left;
+            margin-top: 20px;
+        }
+
+        .options button {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Second Day: Involvement Fair</h1>
+        <p class="intro">
+            You wake up feeling refreshed and excited—it's the second day of school and the involvement fair! You get dressed and ready to go, who can we text and head to the fair with?
+        </p>
+        <img src="https://via.placeholder.com/800x600" alt="Morning Routine" class="main-image">
+        <p class="intro">
+            Based on your previous choices, here’s who you can text or whether you’ll go alone:
+        </p>
+        <div class="options">
+            <div id="group-options">
+                <button class="choice-button" id="group-left" onclick="alert('You text Jasmine, Evelyn, and Taylor, and they’re excited to meet you at the involvement fair!')">Text Jasmine, Evelyn, and Taylor</button>
+                <button class="choice-button" id="group-right" onclick="alert('You text Max, and he suggests meeting at the fair. You’re both excited to hang out!')">Text Max</button>
+                <button class="choice-button" id="group-justina" onclick="alert('You text Justina, and she agrees to meet you there. It’s going to be fun!')">Text Justina</button>
+                <button class="choice-button" id="go-alone" onclick="alert('You decide to go alone, ready to explore the fair on your own terms.')">Go Alone</button>
+            </div>
+        </div>
+        <p class="intro">
+            After deciding, you grab your things and head out, ready for the day ahead!
+        </p>
+        <button onclick="location.href='involvement-fair.html'" class="choice-button">Head to the Involvement Fair</button>
+    </div>
+
+    <script>
+        const options = {
+            "left-door": "group-left",     // Text Jasmine, Evelyn, and Taylor
+            "right-door": "group-right",   // Text Max
+            "syllabi": "go-alone",         // Go Alone
+            "scroll-alone": "go-alone",    // Go Alone
+            "dorm-kids": "go-alone",       // Go Alone
+            "cool-people": "group-justina" // Text Justina
+        };
+
+        const choice = localStorage.getItem('previousChoice');
+        document.querySelectorAll('#group-options button').forEach(button => {
+            button.style.display = 'none';
+        });
+
+        if (choice && options[choice]) {
+            const idToShow = options[choice];
+            document.getElementById(idToShow).style.display = 'block';
+        } else {
+            document.getElementById('go-alone').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
