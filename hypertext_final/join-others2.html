@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset="UTF-8">
+    <title>First Day of University: Dining Hall Route (Join-Others-2) </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+    <body>
+        <div class="container">
+            <h1>Talking to Cool Kids</h1>
+            <p class="intro">You approach the table and say "Hi." No one response and after a few seconds, they went back to their previous conversation.</p>
+            <h2>You feel embarrassed and choose to sit alone :(</h2>
+            <img src="https://www.theodysseyonline.com/media-library/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpbWFnZSI6Imh0dHBzOi8vbWVkaWEucmJsLm1zL2ltYWdlP3U9JTJGZmlsZXMlMkYyMDE2JTJGMDIlMkYyMyUyRjYzNTkxODAxNTQ4MDUyODI0MDE3OTY3NzA4MjNfenplbW8uanBnJmhvPWh0dHAlM0ElMkYlMkZjZG4xLnRoZW9keXNzZXlvbmxpbmUuY29tJnM9Njg0Jmg9ODhjNjg3NzA0MmFjYjNlMzk1ZjA0NDNmMGJhYjI2ZjU0MjgyNzQzMDM1NDE1MzdiNmI2MDI5MzAxY2Q3NWNmNyZzaXplPTk4MHgmYz0xMzQ1NTgzMTY1IiwiZXhwaXJlc19hdCI6MTczNzk4NzkwOH0.tFBYW1e8Qzg53lAj6lJxJa9IhZq4BYjYGoCDRzc2uXU/image.jpg?width=1200&height=628" alt="emogirls.webp" class="main-image">
+            <div class="choices">
+                <button onclick="location.href='end-of-night.html'" class="choice-button">Head back to dorm</button>
+            </div>
+        </div>
+        
+        <script>
+            document.querySelectorAll('.choice-button').forEach(button => {
+                button.addEventListener('mouseover', () => {
+                    button.style.transform = 'scale(1.1)';
+                });
+                button.addEventListener('mouseout', () => {
+                    button.style.transform = 'scale(1)';
+                });
+            });
+        </script>
+    </body>
+</html>

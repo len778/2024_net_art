@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hypertext Narrative: First Day of University</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Your First Day at University</h1>
+        <p class="intro"><b>THE DAY IS FINALLY HERE!!!!</b> Your first day at university! There's so much to take in, and there's no place you'd rather be. The campus buzzes with energy, and the possibilities are endless. So many clubs, so many people, and so many opportunities lie before you. The question is, what's going to be your first move? The choices you make today could shape the rest of your adventure! </p>
+        <img src="https://www.thoughtco.com/thmb/PCVPjqDcfiY4az_kycvn-EJA-e8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/swarthmore-college-Eric-Behrens-flickr-5706ffe35f9b581408d48cb3.jpg" alt="College Life" class="main-image">
+        <div class="choices">
+            <button onclick="location.href='2dining-hall.html'" class="choice-button">Let's go to the dining hall</button>
+            <button onclick="location.href='2dorm-neighbors.html'" class="choice-button">Meet my dorm neighbors</button>
+            <button onclick="location.href='2study.html'" class="choice-button">Start looking at class syllabi</button>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.choice-button').forEach(button => {
+            button.addEventListener('mouseover', () => {
+                button.style.transform = 'scale(1.1)';
+            });
+            button.addEventListener('mouseout', () => {
+                button.style.transform = 'scale(1)';
+            });
+        });
+    </script>
+</body>
+</html>
