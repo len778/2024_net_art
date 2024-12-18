@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset="UTF-8">
+    <title>First Day of University: Dining Hall Route (Burger) </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+    <body>
+        <div class="container">
+            <h1>At the Dining Hall</h1>
+            <p class="intro">This burger looks so delicious! Wow, so many people are here!</p>
+            <h2>Who should I sit with?</h2>
+            <img src="https://cdn.winsightmedia.com/platform/files/public/fsd/600x450/saint-anselm.jpg" alt="Burger" class="main-image">
+            <div class="choices">
+                <button onclick="location.href='sit-alone.html'" class="choice-button">I want to eat and scroll on my phone; it's best to be alone for today</button>
+                <button onclick="location.href='join-others1.html'" class="choice-button">Wait, I think those kids are in my dorm. Let's say "Hi" </button>
+                <button onclick="location.href='join-others2.html'" class="choice-button">Those people look really cool. Let's introduce ourselves</button>
+            </div>
+        </div>
+        
+        <script>
+            document.querySelectorAll('.choice-button').forEach(button => {
+                button.addEventListener('mouseover', () => {
+                    button.style.transform = 'scale(1.1)';
+                });
+                button.addEventListener('mouseout', () => {
+                    button.style.transform = 'scale(1)';
+                });
+            });
+        </script>
+    </body>
+</html>

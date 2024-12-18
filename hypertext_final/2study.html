@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Day of University: Study Route</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Study Time</h1>
+        <p class="intro">I need to hit the books. Let's start looking at the syllabus for these classes. This is harder than I thought.</p>
+        <img src="https://thumbs.dreamstime.com/b/man-studying-tired-night-computer-test-assessment-stress-college-dorm-room-male-university-student-education-278005753.jpg" alt="Study" class="main-image">
+        <h2>What to do?</h2>
+        <div class="choices">
+            <button onclick="location.href='lock-in.html'" class="choice-button">College ain't for the weak-minded, we need to lock in.</button>
+            <button onclick="location.href='break-time.html'" class="choice-button">Proud of myself for starting, let's take a quick break</button>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.choice-button').forEach(button => {
+            button.addEventListener('mouseover', () => {
+                button.style.transform = 'scale(1.1)';
+            });
+            button.addEventListener('mouseout', () => {
+                button.style.transform = 'scale(1)';
+            });
+        });
+    </script>
+</body>
+</html>
